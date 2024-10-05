@@ -3,7 +3,12 @@
 import { Todo } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 
+export const sleep = async (seconds:number = 0) => {
+    return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+};
+
 export const toggleTodo = async (id: string, completed: boolean): Promise<Todo> => {
+
     const todo = await prisma.todo.findFirst({where: {id}});
 
     if(!todo) throw new Error('Todo not found');
