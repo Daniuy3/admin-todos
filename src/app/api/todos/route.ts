@@ -57,3 +57,21 @@ export async function POST(request : NextRequest){
         }), { status: 400 });
     } 
 }
+
+export async function DELETE (){
+  try{
+    await prisma.todo.deleteMany({
+      where: {
+        completed: true
+      }
+    })
+    return new NextResponse(JSON.stringify({
+      message: 'Deleted'
+    }), { status: 200 });
+  }
+  catch{
+    return new NextResponse(JSON.stringify({
+      error: 'Error deleting'
+    }), { status: 500 });
+  }
+}
