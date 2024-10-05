@@ -1,3 +1,4 @@
+import { NewTodo } from "@/components";
 import prisma from "@/lib/prisma";
 import { TodosGrid } from "@/todos";
 
@@ -11,7 +12,9 @@ export default async function RestTodosPage() {
 
   return (
     <div>
-      {/* Formulario para agregar nuevos todos */}
+      <div className="px-10 mb-10">
+      <NewTodo />
+      </div>
       {
         <TodosGrid todos={todos} />
       }

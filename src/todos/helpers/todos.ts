@@ -8,3 +8,8 @@ export const updateTodo = async (id: string, completed: boolean): Promise<Todo> 
     const response = await axios.put(`/api/todos/${id}`,{ completed });
     return response.data;
 }
+
+export const createTodo = async (description: string): Promise<Todo> => {
+    const response = await axios.post('/api/todos', { description });
+    return response.data;
+}
