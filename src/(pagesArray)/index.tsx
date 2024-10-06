@@ -1,6 +1,7 @@
 import { MdMenuBook } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { CiSquareCheck } from "react-icons/ci";
+import { FaCookieBite } from "react-icons/fa6";
 interface Page {
     href: string;
     title: string;
@@ -22,5 +23,10 @@ export const pages : Page[] = [
         href: "/dashboard/server-todos",
         title: "Server Actions",
         icon: <MdMenuBook size={30} />
+    },
+    {
+        href: "/dashboard/cookies",
+        title: "Cookies",
+        icon: <FaCookieBite size={30} />
     },
 ]
