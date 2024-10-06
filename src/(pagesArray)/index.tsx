@@ -2,6 +2,7 @@ import { MdMenuBook } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { CiSquareCheck } from "react-icons/ci";
 import { FaCookieBite } from "react-icons/fa6";
+import { BiCart } from "react-icons/bi";
 interface Page {
     href: string;
     title: string;
@@ -28,5 +29,10 @@ export const pages : Page[] = [
         href: "/dashboard/cookies",
         title: "Cookies",
         icon: <FaCookieBite size={30} />
+    },
+    {
+        href: "/dashboard/products",
+        title: "Products",
+        icon: <BiCart size={30} />
     },
 ]
